@@ -2,7 +2,7 @@
   padding: 40px;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  background: linear-gradient(135deg, #046307, #FFD700); /* optional page gradient */
+  background: linear-gradient(black, #3b0348, #ff6bd3); /* optional page gradient */
   min-height: 100vh;
   color: #fff;
 }
@@ -23,7 +23,7 @@
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 15px;
-  width: 220px;
+  width: 350px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -32,7 +32,7 @@
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
-  height: 150px;
+  height: 350px;
   margin-bottom: 15px;
 }
 

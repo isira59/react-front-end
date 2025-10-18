@@ -5,7 +5,7 @@
   background: transparent; /* no bar look */
   padding: 20px 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #840266, #ed92d8, #ffffff);
+  background: black
 }
 
 .nav-links {
@@ -18,7 +18,7 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #000000; /* soft dark gray */
+  color: white; /* soft dark gray */
   font-size: 1.5rem;
   font-weight: 900;
   
