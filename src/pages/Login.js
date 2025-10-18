@@ -10,11 +10,12 @@ const Login = () => {
   const images = [img1, img2, img3];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImg((prev) => (prev + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+  const interval = setInterval(() => {
+    setCurrentImg((prev) => (prev + 1) % images.length);
+  }, 3000);
+  return () => clearInterval(interval);
+}, [images.length]);
+
 
   return (
     <div className="login-page">
