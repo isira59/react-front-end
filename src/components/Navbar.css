@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* no bar look */
+  padding: 20px 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #840266, #ed92d8, #ffffff);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000; /* soft dark gray */
+  font-size: 1.5rem;
+  font-weight: 900;
+  
+
+  transition: all 0.6s ease;
+}
+
+.nav-links a:hover {
+  color: white; /* soft pink hover */
+  font-size: 1.7rem;
+  transform: scale(1.05);
+}

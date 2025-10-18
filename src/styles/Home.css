@@ -1,6 +1,6 @@
 .home-container {
   text-align: center;
-  background: linear-gradient(135deg, #ffb6c1, #98fb98, #ffffff);
+  background:  linear-gradient(black, #3b0348, #ff6bd3);
   min-height: 100vh;
   color: #000;
   display: flex;
@@ -10,11 +10,11 @@
 }
 
 .home-header {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .home-header h1 {
-  color: #000;
+  color: white;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .home-gallery img {
