@@ -49,4 +49,4 @@ jobs:
           cache-to: type=inline
 
       - name: Confirm successful push
-        run: echo "✅ Docker image pushed to Docker Hub successfully!"
+        run: echo "✅ Docker image pushed to Docker Hub successfull!"
