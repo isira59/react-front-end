@@ -19,7 +19,7 @@ const Home = () => {
       </section>
 
       <footer className="home-footer">
-        <p>💚 Caring for pets, one paw at a time 💗</p>
+        <p>Caring for pets, one paw at a time </p>
       </footer>
     </div>
   );
