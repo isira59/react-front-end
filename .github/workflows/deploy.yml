@@ -50,8 +50,6 @@ jobs:
             ${{ env.DOCKER_USERNAME }}/react-frontend-app:latest
             ${{ env.DOCKER_USERNAME }}/react-frontend-app:${{ github.run_number }}
           platforms: linux/amd64
-          cache-from: type=registry,ref=${{ env.DOCKER_USERNAME }}/react-frontend-app:cache
-          cache-to: type=inline
 
       - name: Confirm successful push
         run: echo "✅ Docker image pushed to Docker Hub successfully!"
@@ -72,18 +70,6 @@ jobs:
       - name: Terraform Init
         run: terraform init
 
+      # 7️⃣ Terraform Apply (Deploy EC2 + Docker)
       - name: Terraform Apply
-        run: terraform apply -auto-approve
-
-      # 7️⃣ SSH into EC2 and update Docker container
-      - name: Deploy new Docker container on EC2
-        uses: appleboy/ssh-action@v0.1.7
-        with:
-          host: ${{ secrets.EC2_HOST }}       # Elastic IP or static DNS
-          username: ubuntu
-          key: ${{ secrets.EC2_SSH_KEY }}
-          script: |
-            docker pull ${{ env.DOCKER_USERNAME }}/react-frontend-app:latest
-            docker stop frontend || true
-            docker rm frontend || true
-            docker run -d --name frontend -p 80:80 ${{ env.DOCKER_USERNAME }}/react-frontend-app:latest
+        run: terraform apply -auto-approve -var "private_key=${{ secrets.EC2_SSH_PRIVATE_KEY }}"

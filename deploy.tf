@@ -7,14 +7,13 @@ variable "private_key" {
   type        = string
 }
 
-# EC2 instance
 resource "aws_instance" "frontend_ec2" {
-  ami                         = "ami-07e075f00c26b085a"  # Replace with valid AMI
+  ami                         = "ami-07e075f00c26b085a"  # Replace if outdated
   instance_type               = "t3.micro"
   subnet_id                   = "subnet-0a2fda8671ffa0e21"
   vpc_security_group_ids      = ["sg-08508ce4b5ca5d940"]
   associate_public_ip_address = true
-  key_name                    = "testing"   # Existing AWS key pair name
+  key_name                    = "testing"   # Existing AWS key pair
 
   tags = {
     Name = "React-Frontend-EC2"
@@ -46,4 +45,9 @@ resource "aws_instance" "frontend_ec2" {
       "sudo docker run -d -p 80:80 --name react-frontend isira59/react-frontend-app:latest"
     ]
   }
+}
+
+# Optional output
+output "ec2_public_ip" {
+  value = aws_instance.frontend_ec2.public_ip
 }
