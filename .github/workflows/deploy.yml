@@ -72,4 +72,4 @@ jobs:
 
       # 7️⃣ Terraform Apply (Deploy EC2 + Docker)
       - name: Terraform Apply
-        run: terraform apply -auto-approve -var "private_key=${{ secrets.EC2_SSH_PRIVATE_KEY }}"
+        run: terraform apply -auto-approve -var "private_key=${{ secrets.EC2_SSH_KEY }}"
